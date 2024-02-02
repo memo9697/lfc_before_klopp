@@ -14,13 +14,13 @@ options = st.sidebar.radio("Select comparison",
                            options=["temps_livraison",
                                     "price"])
 
-show_df = df.filter(items=[options, "review_score"])
+show_df = df.filter(items=[options, "score"])
 
 plot1 = px.histogram(
         show_df,
         x=show_df[options],
         title=f"{options} Histogram",
         nbins=30,
-        color="review_score")
+        color="score")
 
 st.plotly_chart(plot1)

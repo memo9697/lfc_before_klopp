@@ -19,14 +19,14 @@ if options == "temps_livraison Vs retard_livraison":
         df,
         x="temps_livraison",
         y="retard_livraison",
-        color="review_score",
+        color="score",
         title=options)
 elif options == "temps_livraison Vs price":
     plot = px.scatter(
         df,
         x="temps_livraison",
         y="price",
-        color="review_score",
+        color="score",
         title=options)
     
 st.plotly_chart(plot)
